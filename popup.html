@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Post Generator</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>LinkedIn Post Generator</h1>
+        
+        <div class="api-key-section">
+            <label for="apiKey">OpenAI API Key:</label>
+            <input type="password" id="apiKey" placeholder="Enter your OpenAI API key">
+            <button id="saveApiKey">Save</button>
+        </div>
+        
+        <div class="prompt-section">
+            <label for="prompt">Enter your prompt:</label>
+            <textarea id="prompt" placeholder="Describe what you want to post about..."></textarea>
+            <button id="generateBtn">Generate Post</button>
+        </div>
+        
+        <div class="output-section" id="outputSection" style="display: none;">
+            <label for="generatedPost">Generated Post:</label>
+            <textarea id="generatedPost" rows="8"></textarea>
+            <div class="button-group">
+                <button id="postBtn">Post to LinkedIn</button>
+                <button id="cancelBtn">Cancel</button>
+            </div>
+        </div>
+        
+        <div class="loading" id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Generating post...</p>
+        </div>
+        
+        <div class="status" id="status"></div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
